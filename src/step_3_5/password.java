@@ -14,10 +14,11 @@ class FramePas extends JFrame {
 
     public FramePas() {
 
+        //локализация кнопок
         UIManager.put("OptionPane.yesButtonText", "Да");
         UIManager.put("OptionPane.noButtonText", "Нет");
-        UIManager.put("OptionPane.cancelButtonText", "Закрыть");
-        UIManager.put("OptionPane.okButtonText" , "Дальше");
+        UIManager.put("OptionPane.cancelButtonText", "Отмена");
+        UIManager.put("OptionPane.okButtonText" , "Готово");
 
         if (JOptionPane.showConfirmDialog(this,
                 "Добрый день, хотите зарегестрироваться?",
