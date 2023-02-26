@@ -1,0 +1,21 @@
+create database archive;
+create table books(id int PRIMARY KEY AUTO_INCREMENT, title varchar(255) NOT NULL, year int NOT NULL, author varchar(255) NOT NULL);
+insert into books(id,title,year, author) values(1,"Старик и море",1952,"Эрнест Хемингуэй");
+create table genres(id int PRIMARY KEY AUTO_INCREMENT, genre varchar(255) NOT NULL);
+alter table books add column genre_id NOT NULL FOREIGN KEY (genre_id) REFERENCES genre (id);
+insert into genre(id, genre) values(1, "Детектив");
+___
+insert all
+into books(title,year,author) values("Предприниматель",1967,"Кувакин")
+into books(title,year,author) values("Профессор",1977,"Ломоносов")
+into books(title,year,author) values("Преподаватель",1977,"Иванов")
+select * from dual;
+
+insert into books(title,year,author)
+values
+("Подопечный",1967,"Пешков"),
+("Полуночник",1947,"Рамазанов");
+
+____
+insert into genre(id, genre) values(2, "Роман");
+delete from genre where genre = "Роман";
